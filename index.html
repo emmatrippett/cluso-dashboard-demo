@@ -364,27 +364,26 @@ tbody td{padding:13px 14px;font-size:12px}
 .about-project-btn:hover{border-color:var(--accent);color:var(--text)}
 
 /* About modal — portfolio story */
-.about-modal-overlay{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);padding:20px;opacity:0;transition:opacity 0.25s;pointer-events:none}
+.about-modal-overlay{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.78);backdrop-filter:blur(12px);padding:40px 20px;opacity:0;transition:opacity 0.25s;pointer-events:none;overflow-y:auto}
 .about-modal-overlay.visible{opacity:1;pointer-events:auto}
-.about-modal{background:linear-gradient(180deg,#0e111a,#080a10);border:1px solid #252f42;border-radius:20px;padding:36px;max-width:640px;width:100%;position:relative;box-shadow:0 40px 120px rgba(0,0,0,0.7);transform:scale(0.96);transition:transform 0.25s;max-height:90vh;overflow-y:auto}
+.about-modal{background:linear-gradient(180deg,#10131d,#0a0c13);border:1px solid #2a3547;border-radius:22px;padding:44px 48px;max-width:720px;width:100%;position:relative;box-shadow:0 50px 140px rgba(0,0,0,0.8),0 0 0 1px rgba(255,255,255,0.02) inset;transform:scale(0.96);transition:transform 0.25s;margin:auto}
 .about-modal-overlay.visible .about-modal{transform:scale(1)}
-.about-close{position:absolute;top:16px;right:16px;background:transparent;border:none;color:var(--dim);font-size:22px;cursor:pointer;padding:4px 10px;border-radius:6px;line-height:1;transition:all 0.15s}
+.about-close{position:absolute;top:18px;right:18px;background:transparent;border:none;color:var(--dim);font-size:24px;cursor:pointer;padding:4px 12px;border-radius:8px;line-height:1;transition:all 0.15s}
 .about-close:hover{color:var(--text);background:var(--s2)}
-.about-tag{display:inline-block;background:rgba(251,191,36,0.95);color:#1a0e00;font-size:10px;font-weight:900;letter-spacing:0.1em;padding:4px 9px;border-radius:5px;text-transform:uppercase;margin-bottom:14px}
-.about-title{font-size:26px;font-weight:900;letter-spacing:-0.8px;margin-bottom:10px;color:var(--text)}
-.about-sub{font-size:14px;color:var(--sub);line-height:1.6;margin-bottom:24px}
-.about-section{margin-bottom:22px}
-.about-section-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:8px}
-.about-section-body{font-size:13px;color:var(--text);line-height:1.7;opacity:0.92}
-.about-section-body strong{color:var(--text);font-weight:700}
-.about-tech-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.about-tech-pill{background:var(--s2);border:1px solid var(--border2);color:var(--sub);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px}
-.about-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;padding-top:22px;border-top:1px solid var(--border)}
-.about-cta{flex:1;min-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.15s;cursor:pointer;border:none;font-family:inherit}
-.about-cta-primary{background:linear-gradient(135deg,#34d399,#059669);color:#fff;box-shadow:0 4px 20px rgba(52,211,153,0.30)}
-.about-cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(52,211,153,0.45)}
-.about-cta-secondary{background:var(--s2);color:var(--text);border:1px solid var(--border2)}
-.about-cta-secondary:hover{border-color:var(--accent)}
+.about-tag{display:inline-block;background:rgba(251,191,36,0.95);color:#1a0e00;font-size:10px;font-weight:900;letter-spacing:0.12em;padding:5px 11px;border-radius:5px;text-transform:uppercase;margin-bottom:16px}
+.about-title{font-size:30px;font-weight:900;letter-spacing:-1px;margin-bottom:12px;color:#fff}
+.about-sub{font-size:15px;color:var(--sub);line-height:1.65;margin-bottom:30px}
+.about-sub strong{color:var(--text)}
+.about-section{margin-bottom:26px}
+.about-section-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1.2px;color:var(--dim);margin-bottom:10px}
+.about-section-body{font-size:14px;color:var(--text);line-height:1.75;opacity:0.94}
+.about-section-body strong{color:#fff;font-weight:700}
+.about-tech-pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:4px}
+.about-tech-pill{background:var(--s2);border:1px solid var(--border2);color:var(--text);font-size:11.5px;font-weight:600;padding:5px 11px;border-radius:20px}
+.about-ctas{margin-top:8px;padding-top:26px;border-top:1px solid var(--border)}
+.about-cta{display:flex;align-items:center;justify-content:center;gap:8px;padding:14px 22px;border-radius:11px;font-size:14px;font-weight:700;text-decoration:none;transition:all 0.15s;cursor:pointer;border:none;font-family:inherit;width:100%}
+.about-cta-primary{background:linear-gradient(135deg,#34d399,#059669);color:#fff;box-shadow:0 6px 28px rgba(52,211,153,0.35)}
+.about-cta-primary:hover{transform:translateY(-1px);box-shadow:0 10px 40px rgba(52,211,153,0.55)}
 
 /* Mobile polish — demo-specific controls stack nicely on narrow screens */
 @media(max-width:640px){
@@ -4871,7 +4870,6 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const m=document.ge
 
     <div class="about-ctas">
       <a class="about-cta about-cta-primary" href="https://www.linkedin.com/in/emma-trippett" target="_blank" rel="noopener">💬 Let's talk →</a>
-      <a class="about-cta about-cta-secondary" href="https://github.com/emmatrippett/cluso-dashboard-demo" target="_blank" rel="noopener">⭐ View on GitHub</a>
     </div>
   </div>
 </div>
