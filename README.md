@@ -1,4 +1,4 @@
-# Cluso Investor Dashboard — Portfolio Demo
+# Cluso Metrics Dashboard — Portfolio Demo
 
 A live, interactive demo of the internal & investor-facing dashboard I built for [Cluso](https://mycluso.com) during my internship.
 

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cluso Dashboard — Portfolio Demo by Emma Trippett</title>
-<meta name="description" content="Interactive demo of the investor + internal dashboard I built for Cluso during my internship. Click any tile, edit any value, preview the investor view. In production, syncs live from QuickBooks and the team CRM."/>
+<title>Cluso Metrics Dashboard — Portfolio Demo by Emma Trippett</title>
+<meta name="description" content="Interactive demo of the Cluso Metrics Dashboard — the internal + investor-facing dashboard I built during my internship. Click any tile, edit any value, preview the investor view. In production, syncs live from QuickBooks and the team CRM."/>
 <meta name="author" content="Emma Trippett"/>
 
 <!-- Open Graph (LinkedIn, Facebook, Slack, etc.) -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="Cluso Dashboard — Portfolio Demo by Emma Trippett"/>
+<meta property="og:title" content="Cluso Metrics Dashboard — Portfolio Demo by Emma Trippett"/>
 <meta property="og:description" content="Interactive investor &amp; internal dashboard built for Cluso. Click any tile, edit any value. In production, syncs live from QuickBooks &amp; CRM."/>
 <meta property="og:url" content="https://cluso-dashboard-demo.vercel.app"/>
 <meta property="og:image" content="https://cluso-dashboard-demo.vercel.app/og-image.svg"/>
@@ -20,7 +20,7 @@
 
 <!-- Twitter / X Card -->
 <meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="Cluso Dashboard — Portfolio Demo"/>
+<meta name="twitter:title" content="Cluso Metrics Dashboard — Portfolio Demo"/>
 <meta name="twitter:description" content="Interactive B2B SaaS investor dashboard built for Cluso during my internship."/>
 <meta name="twitter:image" content="https://cluso-dashboard-demo.vercel.app/og-image.svg"/>
 
@@ -57,7 +57,8 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:15px 36px;border-bottom:1px solid var(--border);background:rgba(8,9,14,0.88);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10;gap:16px;flex-wrap:wrap}
 .topbar-left{order:1}
 .topbar-right{order:2;margin-left:auto}
-.forecast-controls{order:3;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+.forecast-controls{order:3;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;gap:4px}
+.forecast-controls > *{justify-content:center}
 .topbar-left{display:flex;flex-direction:column}
 .topbar-title{font-size:16px;font-weight:700;letter-spacing:-0.3px}
 .topbar-sub{font-size:11px;color:var(--sub)}
@@ -4842,7 +4843,7 @@ document.addEventListener('keydown',e=>{if(e.key==='Escape'){const m=document.ge
   <div class="about-modal">
     <button class="about-close" onclick="closeAboutModal()" title="Close (Esc)">×</button>
     <span class="about-tag">Portfolio Demo</span>
-    <div class="about-title">Cluso Investor Dashboard</div>
+    <div class="about-title">Cluso Metrics Dashboard</div>
     <div class="about-sub">A live, interactive demo of the internal &amp; investor-facing dashboard I built for <strong>Cluso</strong> during my internship. Everything here is real code — just running on sample data.</div>
 
     <div class="about-section">
