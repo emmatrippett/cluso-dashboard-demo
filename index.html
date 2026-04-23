@@ -3,7 +3,31 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Cluso — Dashboard</title>
+<title>Cluso Dashboard — Portfolio Demo by Emma Trippett</title>
+<meta name="description" content="Interactive demo of the investor + internal dashboard I built for Cluso during my internship. Click any tile, edit any value, preview the investor view. In production, syncs live from QuickBooks and the team CRM."/>
+<meta name="author" content="Emma Trippett"/>
+
+<!-- Open Graph (LinkedIn, Facebook, Slack, etc.) -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Cluso Dashboard — Portfolio Demo by Emma Trippett"/>
+<meta property="og:description" content="Interactive investor &amp; internal dashboard built for Cluso. Click any tile, edit any value. In production, syncs live from QuickBooks &amp; CRM."/>
+<meta property="og:url" content="https://cluso-dashboard-demo.vercel.app"/>
+<meta property="og:image" content="https://cluso-dashboard-demo.vercel.app/og-image.svg"/>
+<meta property="og:image:type" content="image/svg+xml"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Emma Trippett · Portfolio"/>
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Cluso Dashboard — Portfolio Demo"/>
+<meta name="twitter:description" content="Interactive B2B SaaS investor dashboard built for Cluso during my internship."/>
+<meta name="twitter:image" content="https://cluso-dashboard-demo.vercel.app/og-image.svg"/>
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="apple-touch-icon" href="/favicon.svg"/>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
@@ -334,6 +358,44 @@ tbody td{padding:13px 14px;font-size:12px}
 /* "Preview as Investor" button — extra-visible portfolio CTA */
 .preview-investor-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(167,139,250,0.20),rgba(99,102,241,0.20));border:1px solid rgba(167,139,250,0.45);color:var(--text);font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;transition:all 0.15s;font-family:inherit}
 .preview-investor-btn:hover{border-color:rgba(167,139,250,0.85);transform:translateY(-1px);box-shadow:0 4px 14px rgba(167,139,250,0.25)}
+
+/* "About this project" button — muted portfolio-context CTA */
+.about-project-btn{display:inline-flex;align-items:center;gap:5px;background:transparent;border:1px solid var(--border2);color:var(--sub);font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;transition:all 0.15s;font-family:inherit}
+.about-project-btn:hover{border-color:var(--accent);color:var(--text)}
+
+/* About modal — portfolio story */
+.about-modal-overlay{position:fixed;inset:0;z-index:300;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);padding:20px;opacity:0;transition:opacity 0.25s;pointer-events:none}
+.about-modal-overlay.visible{opacity:1;pointer-events:auto}
+.about-modal{background:linear-gradient(180deg,#0e111a,#080a10);border:1px solid #252f42;border-radius:20px;padding:36px;max-width:640px;width:100%;position:relative;box-shadow:0 40px 120px rgba(0,0,0,0.7);transform:scale(0.96);transition:transform 0.25s;max-height:90vh;overflow-y:auto}
+.about-modal-overlay.visible .about-modal{transform:scale(1)}
+.about-close{position:absolute;top:16px;right:16px;background:transparent;border:none;color:var(--dim);font-size:22px;cursor:pointer;padding:4px 10px;border-radius:6px;line-height:1;transition:all 0.15s}
+.about-close:hover{color:var(--text);background:var(--s2)}
+.about-tag{display:inline-block;background:rgba(251,191,36,0.95);color:#1a0e00;font-size:10px;font-weight:900;letter-spacing:0.1em;padding:4px 9px;border-radius:5px;text-transform:uppercase;margin-bottom:14px}
+.about-title{font-size:26px;font-weight:900;letter-spacing:-0.8px;margin-bottom:10px;color:var(--text)}
+.about-sub{font-size:14px;color:var(--sub);line-height:1.6;margin-bottom:24px}
+.about-section{margin-bottom:22px}
+.about-section-label{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--dim);margin-bottom:8px}
+.about-section-body{font-size:13px;color:var(--text);line-height:1.7;opacity:0.92}
+.about-section-body strong{color:var(--text);font-weight:700}
+.about-tech-pills{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.about-tech-pill{background:var(--s2);border:1px solid var(--border2);color:var(--sub);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px}
+.about-ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;padding-top:22px;border-top:1px solid var(--border)}
+.about-cta{flex:1;min-width:160px;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:10px;font-size:13px;font-weight:700;text-decoration:none;transition:all 0.15s;cursor:pointer;border:none;font-family:inherit}
+.about-cta-primary{background:linear-gradient(135deg,#34d399,#059669);color:#fff;box-shadow:0 4px 20px rgba(52,211,153,0.30)}
+.about-cta-primary:hover{transform:translateY(-1px);box-shadow:0 6px 28px rgba(52,211,153,0.45)}
+.about-cta-secondary{background:var(--s2);color:var(--text);border:1px solid var(--border2)}
+.about-cta-secondary:hover{border-color:var(--accent)}
+
+/* Mobile polish — demo-specific controls stack nicely on narrow screens */
+@media(max-width:640px){
+  .preview-investor-btn,.about-project-btn{font-size:10px;padding:6px 10px}
+  .preview-investor-btn .label-full{display:none}
+  .page-info-banner{padding:11px 13px;gap:10px;font-size:12px}
+  .page-info-banner-icon{font-size:9px;padding:3px 7px}
+  .about-modal{padding:26px 22px;border-radius:14px}
+  .about-title{font-size:22px}
+  .about-cta{min-width:0}
+}
 
 /* Integration modal */
 .int-modal-overlay{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.65);backdrop-filter:blur(8px);padding:20px;opacity:0;transition:opacity 0.2s;pointer-events:none}
@@ -768,7 +830,8 @@ tbody td{padding:13px 14px;font-size:12px}
       </div>
     </div>
     <div class="topbar-right">
-      <button class="preview-investor-btn" onclick="previewInvestorView()" title="See the curated, investor-facing version of this dashboard">👀 Preview as Investor</button>
+      <button class="preview-investor-btn" onclick="previewInvestorView()" title="See the curated, investor-facing version of this dashboard">👀 <span class="label-full">Preview as </span>Investor</button>
+      <button class="about-project-btn" onclick="openAboutModal()" title="About this portfolio project">ℹ️ About</button>
       <button class="search-btn" onclick="openSearch()" title="Search metrics & sections (/)">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         Search
@@ -4761,6 +4824,56 @@ async function saveTabEditor(){
   showToast((_tabNiceNames[key]||key)+' metrics updated','success');
   updateAll();
 }
+
+// ── ABOUT MODAL (portfolio context) ──
+function openAboutModal(){document.getElementById('aboutModal').classList.add('visible');}
+function closeAboutModal(){document.getElementById('aboutModal').classList.remove('visible');}
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){const m=document.getElementById('aboutModal');if(m&&m.classList.contains('visible'))closeAboutModal();}});
 </script>
+
+<!-- About Modal -->
+<div class="about-modal-overlay" id="aboutModal" onclick="if(event.target===this)closeAboutModal()">
+  <div class="about-modal">
+    <button class="about-close" onclick="closeAboutModal()" title="Close (Esc)">×</button>
+    <span class="about-tag">Portfolio Demo</span>
+    <div class="about-title">Cluso Investor Dashboard</div>
+    <div class="about-sub">A live, interactive demo of the internal &amp; investor-facing dashboard I built for <strong>Cluso</strong> during my internship. Everything here is real code — just running on sample data.</div>
+
+    <div class="about-section">
+      <div class="about-section-label">My Role</div>
+      <div class="about-section-body">Solo designer &amp; engineer — scoped the product, designed the UX, and shipped every line of code. Worked directly with the CEO to define KPIs investors actually care about, and built three role-based views (Admin / External / Investor) from a single codebase.</div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-label">What's in here</div>
+      <div class="about-section-body">Financials, revenue, pipeline, marketing, impact, year-on-year comparisons, editable targets, project tracker, role-based access, configurable integrations, and a curated investor view. <strong>Everything is interactive</strong> — click, edit, customise which metrics you see.</div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-label">In production</div>
+      <div class="about-section-body">Financial data syncs live from <strong>QuickBooks</strong>; sales &amp; customer data flows from the team's <strong>CRM</strong>. Admins can still override or annotate any field. Realtime updates push to every connected viewer via Supabase subscriptions.</div>
+    </div>
+
+    <div class="about-section">
+      <div class="about-section-label">Stack</div>
+      <div class="about-tech-pills">
+        <span class="about-tech-pill">Vanilla JS</span>
+        <span class="about-tech-pill">Chart.js</span>
+        <span class="about-tech-pill">Supabase</span>
+        <span class="about-tech-pill">Postgres</span>
+        <span class="about-tech-pill">Edge Functions</span>
+        <span class="about-tech-pill">Realtime</span>
+        <span class="about-tech-pill">Vercel</span>
+        <span class="about-tech-pill">Resend</span>
+        <span class="about-tech-pill">Gemini API</span>
+      </div>
+    </div>
+
+    <div class="about-ctas">
+      <a class="about-cta about-cta-primary" href="https://www.linkedin.com/in/emma-trippett" target="_blank" rel="noopener">💬 Let's talk →</a>
+      <a class="about-cta about-cta-secondary" href="https://github.com/emmatrippett/cluso-dashboard-demo" target="_blank" rel="noopener">⭐ View on GitHub</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>

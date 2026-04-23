@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M60 0 L0 0 0 60" fill="none" stroke="#1e2535" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#08090e"/>
+  <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- Cluso logo + wordmark -->
+  <g transform="translate(80, 75)">
+    <circle cx="34" cy="34" r="32" fill="#1a5c3a" stroke="#c0c0c0" stroke-width="3"/>
+    <path d="M34 8 C38 26, 44 32, 60 34 C44 36, 38 42, 34 60 C30 42, 24 36, 8 34 C24 32, 30 26, 34 8Z" fill="#fff"/>
+  </g>
+  <text x="160" y="118" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="40" font-weight="900" letter-spacing="-1">Cluso</text>
+  <text x="160" y="145" fill="#8494a8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="600" letter-spacing="0.3">PORTFOLIO DEMO</text>
+
+  <!-- Main title -->
+  <text x="80" y="270" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="68" font-weight="900" letter-spacing="-2">Investor &amp; Internal</text>
+  <text x="80" y="340" fill="#fff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="68" font-weight="900" letter-spacing="-2">Dashboard</text>
+  <text x="80" y="385" fill="#8494a8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="22" font-weight="500">Real-time metrics for an early-stage B2B SaaS · Built for Cluso</text>
+
+  <!-- KPI cards -->
+  <g transform="translate(80, 450)">
+    <rect width="180" height="95" rx="14" fill="#131720" stroke="#1e2535" stroke-width="1"/>
+    <text x="18" y="32" fill="#8494a8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">ARR</text>
+    <text x="18" y="72" fill="#34d399" font-family="-apple-system, sans-serif" font-size="32" font-weight="900">£280k</text>
+  </g>
+  <g transform="translate(280, 450)">
+    <rect width="180" height="95" rx="14" fill="#131720" stroke="#1e2535" stroke-width="1"/>
+    <text x="18" y="32" fill="#8494a8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">RUNWAY</text>
+    <text x="18" y="72" fill="#a78bfa" font-family="-apple-system, sans-serif" font-size="32" font-weight="900">27 mo</text>
+  </g>
+  <g transform="translate(480, 450)">
+    <rect width="220" height="95" rx="14" fill="#131720" stroke="#1e2535" stroke-width="1"/>
+    <text x="18" y="32" fill="#8494a8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">GROSS MARGIN</text>
+    <text x="18" y="72" fill="#34d399" font-family="-apple-system, sans-serif" font-size="32" font-weight="900">93%</text>
+  </g>
+  <g transform="translate(720, 450)">
+    <rect width="240" height="95" rx="14" fill="#131720" stroke="#1e2535" stroke-width="1"/>
+    <text x="18" y="32" fill="#8494a8" font-family="-apple-system, sans-serif" font-size="12" font-weight="700" letter-spacing="1">LTV : CAC</text>
+    <text x="18" y="72" fill="#60a5fa" font-family="-apple-system, sans-serif" font-size="32" font-weight="900">4.2 : 1</text>
+  </g>
+
+  <!-- Author credit -->
+  <text x="1120" y="602" fill="#8494a8" font-family="-apple-system, sans-serif" font-size="18" font-weight="600" text-anchor="end">Built by Emma Trippett</text>
+</svg>
