@@ -323,13 +323,13 @@ tbody td{padding:13px 14px;font-size:12px}
 .int-big-status{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
 .int-configure-hint{font-size:11px;color:var(--dim);margin-top:10px;font-weight:500}
 
-/* Per-page info banner (portfolio context for first-time visitors) */
-.page-info-banner{display:flex;align-items:flex-start;gap:12px;background:linear-gradient(135deg,rgba(99,102,241,0.10),rgba(99,102,241,0.04));border:1px solid rgba(99,102,241,0.28);border-radius:12px;padding:12px 16px;margin-bottom:20px;font-size:12.5px;line-height:1.55}
-.page-info-banner-icon{flex-shrink:0;font-size:15px;line-height:1.4;margin-top:1px}
-.page-info-banner-text{flex:1;color:var(--sub)}
-.page-info-banner-text strong{color:var(--text);font-weight:700}
-.page-info-banner-close{flex-shrink:0;background:transparent;border:none;color:var(--dim);font-size:18px;cursor:pointer;padding:0 4px;line-height:1;transition:color 0.15s}
-.page-info-banner-close:hover{color:var(--text)}
+/* Per-page info banner (portfolio demo context — visually distinct from app UI) */
+.page-info-banner{display:flex;align-items:flex-start;gap:14px;background:linear-gradient(135deg,rgba(251,191,36,0.16),rgba(251,191,36,0.05));border:1px solid rgba(251,191,36,0.45);border-left:4px solid rgba(251,191,36,0.95);border-radius:10px;padding:13px 16px 13px 18px;margin-bottom:20px;font-size:12.5px;line-height:1.55;box-shadow:0 1px 0 rgba(251,191,36,0.08)}
+.page-info-banner-icon{flex-shrink:0;background:rgba(251,191,36,0.95);color:#1a0e00;font-size:10px;font-weight:900;letter-spacing:0.1em;padding:4px 9px;border-radius:5px;text-transform:uppercase;align-self:flex-start;margin-top:1px;white-space:nowrap}
+.page-info-banner-text{flex:1;color:var(--text);opacity:0.92}
+.page-info-banner-text strong{color:#fbbf24;font-weight:700}
+.page-info-banner-close{flex-shrink:0;background:transparent;border:none;color:rgba(251,191,36,0.7);font-size:18px;cursor:pointer;padding:0 4px;line-height:1;transition:color 0.15s;align-self:flex-start;margin-top:1px;font-weight:600}
+.page-info-banner-close:hover{color:rgba(251,191,36,1)}
 
 /* "Preview as Investor" button — extra-visible portfolio CTA */
 .preview-investor-btn{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,rgba(167,139,250,0.20),rgba(99,102,241,0.20));border:1px solid rgba(167,139,250,0.45);color:var(--text);font-size:11px;font-weight:700;padding:6px 12px;border-radius:8px;cursor:pointer;transition:all 0.15s;font-family:inherit}
@@ -792,7 +792,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- OVERVIEW -->
   <div class="page active" id="page-overview">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Welcome — this is the <strong>daily snapshot</strong> the Cluso team uses internally. The 8 KPIs at the top are tracked weekly. <strong>Click any tile to drill in</strong>, or use <strong>👀 Preview as Investor</strong> (top right) to see the curated investor-facing view. In production, financial data syncs from <strong>QuickBooks</strong> and sales/customer data flows from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Welcome — this is the <strong>daily snapshot</strong> the Cluso team uses internally. The 8 KPIs at the top are tracked weekly. <strong>Click any tile to drill in</strong>, or use <strong>👀 Preview as Investor</strong> (top right) to see the curated investor-facing view. In production, financial data syncs from <strong>QuickBooks</strong> and sales/customer data flows from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="ov-year-label"></span></div><div style="display:flex;gap:8px"><button class="edit-targets-btn" onclick="openTabEditor('overview')">&#9881;&#65039; Edit Metrics</button><button class="edit-targets-btn" onclick="toggleEditActuals('overview')">&#9998; Edit Data</button></div></div>
       <div class="edit-panel" id="edit-overview-panel">
@@ -833,7 +833,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- FINANCIALS -->
   <div class="page" id="page-financials">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Deep-dive on the company's <strong>financial health</strong> — revenue, costs, margins, cash position and runway. Toggle between annual and monthly views. <strong>Admins can edit any field inline</strong>; in production, defaults sync live from <strong>QuickBooks</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Deep-dive on the company's <strong>financial health</strong> — revenue, costs, margins, cash position and runway. Toggle between annual and monthly views. <strong>Admins can edit any field inline</strong>; in production, defaults sync live from <strong>QuickBooks</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section" style="padding:0 36px;padding-top:36px">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="fin-kpi-year-label"></span></div><div style="display:flex;gap:8px"><button class="edit-targets-btn" onclick="openTabEditor('financials')">&#9881;&#65039; Edit Metrics</button><button class="edit-targets-btn" onclick="toggleEditActuals('financials')">&#9998; Edit Data</button></div></div>
       <div class="edit-panel" id="edit-financials-panel">
@@ -930,7 +930,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- REVENUE -->
   <div class="page" id="page-revenue">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Revenue breakdown — recurring revenue, growth rate, monthly trajectory and forecast vs actuals. <strong>Editable inline</strong> by admins; in production, monthly figures sync from <strong>QuickBooks</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Revenue breakdown — recurring revenue, growth rate, monthly trajectory and forecast vs actuals. <strong>Editable inline</strong> by admins; in production, monthly figures sync from <strong>QuickBooks</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="rev-kpi-year-label"></span></div><button class="edit-targets-btn" onclick="openTabEditor('revenue')">&#9881;&#65039; Edit Metrics</button></div>
       <div class="kpi-grid" id="revenue-kpis"></div>
@@ -1025,7 +1025,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- PIPELINE -->
   <div class="page" id="page-pipeline">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Sales pipeline — prospects contacted, demos booked, conversion rates and deal velocity. In production, pipeline data syncs live from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Sales pipeline — prospects contacted, demos booked, conversion rates and deal velocity. In production, pipeline data syncs live from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="pip-kpi-year-label"></span></div><button class="edit-targets-btn" onclick="openTabEditor('pipeline')">&#9881;&#65039; Edit Metrics</button></div>
       <div class="kpi-grid" id="pipeline-kpis"></div>
@@ -1076,7 +1076,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- INTEGRATIONS -->
   <div class="page" id="page-integrations">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Connect the dashboard to the team's stack — <strong>Slack</strong> for live alerts, <strong>Email digests</strong> for weekly summaries, and <strong>Gemini AI</strong> for chat &amp; strategic insights. Click any tile to configure.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Connect the dashboard to the team's stack — <strong>Slack</strong> for live alerts, <strong>Email digests</strong> for weekly summaries, and <strong>Gemini AI</strong> for chat &amp; strategic insights. Click any tile to configure.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head">
         <div>
@@ -1207,7 +1207,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- MARKETING -->
   <div class="page" id="page-marketing">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Marketing performance — top-of-funnel volume, channels and campaign attribution. In production, this connects to ad-platform APIs and the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Marketing performance — top-of-funnel volume, channels and campaign attribution. In production, this connects to ad-platform APIs and the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head">
         <div>
@@ -1235,7 +1235,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- IMPACT -->
   <div class="page" id="page-impact">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Cluso's <strong>impact metrics</strong> — end-users reached and social value created. Designed for the impact-focused investor narrative and reported alongside financial performance.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Cluso's <strong>impact metrics</strong> — end-users reached and social value created. Designed for the impact-focused investor narrative and reported alongside financial performance.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head">
         <div>
@@ -1318,7 +1318,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- COMPARISONS -->
   <div class="page" id="page-comparisons">
-    <div class="page-info-banner"><span class="page-info-banner-icon">ℹ️</span><div class="page-info-banner-text">Year-on-year comparisons — see how each metric tracks versus prior years and forecast. <strong>Toggle individual years on/off</strong> to focus on specific periods.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Year-on-year comparisons — see how each metric tracks versus prior years and forecast. <strong>Toggle individual years on/off</strong> to focus on specific periods.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="comp-kpi-year-label"></span></div><button class="edit-targets-btn" onclick="openTabEditor('comparisons')">&#9881;&#65039; Edit Metrics</button></div>
       <div class="kpi-grid" id="comparisons-kpis"></div>
