@@ -32,7 +32,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html,body{overflow-x:hidden}
+html,body{overflow-x:clip}
 :root {
   --bg:#08090e;--s1:#0e111a;--s2:#131720;--s3:#181d28;--border:#1e2535;--border2:#252f42;
   --text:#dde3ee;--sub:#8494a8;--dim:#3f4f63;--accent:#6366f1;
@@ -57,7 +57,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',sans-serif;
 .topbar{display:flex;align-items:center;justify-content:space-between;padding:15px 36px;border-bottom:1px solid var(--border);background:rgba(8,9,14,0.88);backdrop-filter:blur(14px);position:sticky;top:0;z-index:10;gap:16px;flex-wrap:wrap}
 .topbar-left{order:1}
 .topbar-right{order:2;margin-left:auto}
-.forecast-controls{order:3;flex:1 1 100%;min-width:0}
+.forecast-controls{order:3;flex:1 1 100%;min-width:0;display:flex;flex-direction:column;align-items:center;gap:4px}
 .topbar-left{display:flex;flex-direction:column}
 .topbar-title{font-size:16px;font-weight:700;letter-spacing:-0.3px}
 .topbar-sub{font-size:11px;color:var(--sub)}
