@@ -727,7 +727,7 @@ tbody td{padding:13px 14px;font-size:12px}
   <div class="topbar">
     <div class="topbar-left">
       <div class="topbar-title" id="page-title">Overview</div>
-      <div class="topbar-sub">Cluso — Investor Dashboard · <span id="last-synced" style="color:var(--dim)">Syncing...</span> <button onclick="hardResyncData()" title="Re-fetch all data from database and clear any cached/manual overrides" style="margin-left:8px;padding:3px 10px;background:var(--s2);border:1px solid var(--border2);border-radius:6px;color:var(--sub);font-size:10px;font-weight:700;cursor:pointer;transition:all 0.15s" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--sub)';this.style.borderColor='var(--border2)'">↻ Re-sync</button></div>
+      <div class="topbar-sub"><span id="last-synced" style="color:var(--dim)">Syncing...</span> <button onclick="hardResyncData()" title="Re-fetch all data from database and clear any cached/manual overrides" style="margin-left:8px;padding:3px 10px;background:var(--s2);border:1px solid var(--border2);border-radius:6px;color:var(--sub);font-size:10px;font-weight:700;cursor:pointer;transition:all 0.15s" onmouseover="this.style.color='var(--accent)';this.style.borderColor='var(--accent)'" onmouseout="this.style.color='var(--sub)';this.style.borderColor='var(--border2)'">↻ Re-sync</button></div>
     </div>
     <div class="forecast-controls">
       <div style="display:flex;align-items:center;gap:6px">
@@ -1234,12 +1234,6 @@ tbody td{padding:13px 14px;font-size:12px}
       <div class="card">
         <div class="card-head"><div><div class="card-title">Annual Marketing Investment</div><div class="card-sub">Spend across all channels (paid + events) across all 5 years</div></div></div>
         <div class="chart-wrap" style="height:240px"><canvas id="marketingSpendChart"></canvas></div>
-      </div>
-    </div>
-    <div class="section">
-      <div style="background:rgba(99,102,241,0.05);border:1px dashed rgba(99,102,241,0.3);border-radius:14px;padding:24px;text-align:center">
-        <div style="font-size:13px;color:var(--sub);font-weight:600;margin-bottom:4px">More marketing metrics coming soon</div>
-        <div style="font-size:11px;color:var(--dim)">Channel breakdown, attribution, MQL/SQL funnel, ad performance</div>
       </div>
     </div>
   </div>
