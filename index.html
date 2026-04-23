@@ -792,7 +792,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- OVERVIEW -->
   <div class="page active" id="page-overview">
-    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Welcome — this is the <strong>daily snapshot</strong> the Cluso team uses internally. The 8 KPIs at the top are tracked weekly. <strong>Click any tile to drill in</strong>, or use <strong>👀 Preview as Investor</strong> (top right) to see the curated investor-facing view. In production, financial data syncs from <strong>QuickBooks</strong> and sales/customer data flows from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Welcome — this is the <strong>daily snapshot</strong> the Cluso team uses internally. <strong>This whole dashboard is fully interactive:</strong> click any KPI tile to drill in, edit values directly in the UI, and use <strong>⚙️ Edit Metrics</strong> (top of each tab) to customise which metrics you see. Try <strong>👀 Preview as Investor</strong> (top right) to see the curated investor-facing view. In production, financial data syncs live from <strong>QuickBooks</strong> and sales/customer data flows from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="ov-year-label"></span></div><div style="display:flex;gap:8px"><button class="edit-targets-btn" onclick="openTabEditor('overview')">&#9881;&#65039; Edit Metrics</button><button class="edit-targets-btn" onclick="toggleEditActuals('overview')">&#9998; Edit Data</button></div></div>
       <div class="edit-panel" id="edit-overview-panel">
@@ -1120,6 +1120,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- ACCESS -->
   <div class="page" id="page-access">
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text"><strong>Role-based access control.</strong> Approve external email addresses, manage who can see the internal dashboard, and assign investor-only roles. Non-<code>@mycluso.com</code> users must be invited by an admin before they can sign up.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Team Access</div></div>
       <div class="card" style="margin-bottom:20px">
@@ -1142,6 +1143,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- INVESTOR VIEW (Admin Panel) -->
   <div class="page" id="page-investor">
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text"><strong>Admin control panel for the investor-facing dashboard.</strong> Choose which metrics investors can see, write a monthly update, and invite investors by email. Click <strong>Preview Investor View</strong> below (or the <strong>👀 Preview as Investor</strong> button top right) to see exactly what an investor sees when they log in.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head"><div class="section-label">Investor Dashboard Management</div><button class="btn btn-primary" onclick="previewInvestorView()" style="font-size:12px">Preview Investor View</button></div>
 
@@ -1257,6 +1259,7 @@ tbody td{padding:13px 14px;font-size:12px}
 
   <!-- DATA ENTRY -->
   <div class="page" id="page-dataentry">
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text"><strong>Monthly data entry.</strong> Admins type actual values month-by-month — <strong>changes save as you type</strong> (no "Save" button needed) and instantly update every chart across the dashboard. In production, this layer supplements the <strong>QuickBooks</strong> and <strong>CRM</strong> sync with manual overrides for metrics that aren't yet automated.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
     <div class="section">
       <div class="section-head">
         <div>
