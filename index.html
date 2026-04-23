@@ -4687,6 +4687,9 @@ let isRecoveryMode=false;
   await initDashboard();
   // Hide Sign Out + login-related controls that don't make sense in demo
   document.querySelectorAll('[onclick*="handleLogout"]').forEach(b=>b.style.display='none');
+  // Auto-open the About modal on every page load so first-time visitors get
+  // the portfolio context immediately. Small delay lets the dashboard paint first.
+  setTimeout(()=>{if(typeof openAboutModal==='function')openAboutModal();},600);
 })();
 </script>
 
