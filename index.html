@@ -390,6 +390,95 @@ tbody td{padding:13px 14px;font-size:12px}
 .about-cta-primary{background:linear-gradient(135deg,#34d399,#059669);color:#fff;box-shadow:0 6px 28px rgba(52,211,153,0.35)}
 .about-cta-primary:hover{transform:translateY(-1px);box-shadow:0 10px 40px rgba(52,211,153,0.55)}
 
+/* ── TARGETS PAGE ── */
+.target-group{background:var(--s1);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:16px}
+.target-group-head{font-size:15px;font-weight:800;letter-spacing:-0.2px;color:var(--text);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.target-group-head::before{content:'';width:4px;height:20px;background:var(--accent);border-radius:3px}
+.target-group-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.target-card{background:var(--s2);border:1px solid var(--border2);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.15s;position:relative}
+.target-card:hover{border-color:var(--border)}
+.target-card-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.target-card-label{font-size:12px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:8px;flex:1}
+.target-headline{display:grid;grid-template-columns:1fr auto 1fr;gap:6px;align-items:stretch;padding:6px 0 10px}
+.target-headline-col{display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:9px;min-width:0}
+.target-headline-col.actual{align-items:flex-start;background:var(--s1);border:1px solid var(--border2)}
+.target-headline-col.actual.green{border-color:rgba(52,211,153,0.5);background:rgba(52,211,153,0.08)}
+.target-headline-col.actual.orange{border-color:rgba(251,191,36,0.5);background:rgba(251,191,36,0.08)}
+.target-headline-col.actual.red{border-color:rgba(248,113,113,0.5);background:rgba(248,113,113,0.08)}
+.target-headline-col.target{align-items:flex-end;text-align:right;background:var(--s1);border:1px dashed var(--border2)}
+.target-headline-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.7px;color:var(--dim)}
+.target-headline-value{font-size:24px;font-weight:800;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.05;word-break:break-word}
+.target-headline-value.green{color:#34d399}
+.target-headline-value.orange{color:#fbbf24}
+.target-headline-value.red{color:#f87171}
+.target-headline-vs{display:flex;align-items:center;justify-content:center;font-size:9px;color:var(--dim);font-weight:800;padding:0 2px;text-transform:uppercase;letter-spacing:0.6px}
+.target-bar-wrap{padding:0 2px 2px}
+.target-bar-big{position:relative;height:10px;background:var(--s1);border-radius:5px;overflow:hidden}
+.target-bar-fill-big{position:absolute;left:0;top:0;bottom:0;border-radius:5px;transition:width 0.3s ease-out}
+.target-bar-fill-big.green{background:linear-gradient(90deg,#34d399,#22d3ee)}
+.target-bar-fill-big.orange{background:linear-gradient(90deg,#fbbf24,#f97316)}
+.target-bar-fill-big.red{background:linear-gradient(90deg,#f87171,#ef4444)}
+.target-bar-fill-big.gray{background:var(--border2)}
+.target-bar-caption{display:flex;justify-content:space-between;align-items:center;font-size:10px;font-weight:600;color:var(--dim);padding-top:6px}
+.target-bar-caption .pct{font-size:12px;font-weight:800;font-variant-numeric:tabular-nums}
+.target-bar-caption .pct.green{color:#34d399}
+.target-bar-caption .pct.orange{color:#fbbf24}
+.target-bar-caption .pct.red{color:#f87171}
+.target-feature-row{display:flex;gap:14px;padding-top:10px;border-top:1px dashed var(--border2);margin-top:2px;flex-wrap:wrap}
+.target-feat{font-size:10px;font-weight:600;color:var(--sub);display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none}
+.target-feat input{cursor:pointer;accent-color:var(--accent)}
+.target-feat:hover{color:var(--text)}
+.target-quarter-headline{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;padding:4px 0 10px}
+.target-q-big-cell{background:var(--s1);border:1px solid var(--border2);border-radius:9px;padding:8px 6px;display:flex;flex-direction:column;gap:4px;align-items:center;text-align:center}
+.target-q-big-cell.green{border-color:rgba(52,211,153,0.5);background:rgba(52,211,153,0.08)}
+.target-q-big-cell.orange{border-color:rgba(251,191,36,0.5);background:rgba(251,191,36,0.08)}
+.target-q-big-cell.red{border-color:rgba(248,113,113,0.5);background:rgba(248,113,113,0.08)}
+.target-q-big-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:0.6px;color:var(--sub)}
+.target-q-big-actual{font-size:15px;font-weight:800;color:var(--text);font-variant-numeric:tabular-nums;line-height:1.1}
+.target-q-big-actual.green{color:#34d399}.target-q-big-actual.orange{color:#fbbf24}.target-q-big-actual.red{color:#f87171}
+.target-q-big-target{font-size:10px;color:var(--dim);font-weight:600}
+.target-q-big-pct{font-size:10px;font-weight:800;margin-top:2px}
+.target-q-big-pct.green{color:#34d399}.target-q-big-pct.orange{color:#fbbf24}.target-q-big-pct.red{color:#f87171}
+
+/* ── KEY PROJECTS PAGE ── */
+.kp-header-row{display:grid;grid-template-columns:minmax(220px,1.6fr) 140px 130px 160px 130px 40px;gap:10px;padding:0 14px 8px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:0.6px;color:var(--dim)}
+.project-row{display:grid;grid-template-columns:minmax(220px,1.6fr) 140px 130px 160px 130px 40px;gap:10px;align-items:center;padding:10px 14px;background:var(--s1);border:1px solid var(--border);border-radius:10px;margin-bottom:8px;transition:border-color 0.15s}
+.project-row:hover{border-color:var(--border2)}
+.project-name-wrap{display:flex;flex-direction:column;gap:2px;min-width:0}
+.project-name-input{padding:7px 10px;background:transparent;border:1px solid transparent;border-radius:6px;color:var(--text);font-size:13px;font-weight:700;transition:all 0.15s;width:100%}
+.project-name-input:focus,.project-name-input:hover{border-color:var(--border2);background:var(--s2);outline:none}
+.project-notes-toggle{font-size:10px;color:var(--dim);cursor:pointer;padding:0 10px;user-select:none;display:inline-flex;align-items:center;gap:4px;margin-top:2px;transition:color 0.15s}
+.project-notes-toggle:hover{color:var(--accent)}
+.project-notes-wrap{grid-column:1/-1;padding:6px 10px 2px;display:none}
+.project-notes-wrap.open{display:block}
+.project-notes{width:100%;padding:8px 10px;background:var(--s2);border:1px solid var(--border2);border-radius:6px;color:var(--text);font-size:12px;line-height:1.5;resize:vertical;min-height:60px;font-family:inherit}
+.project-notes:focus{outline:none;border-color:var(--accent)}
+.project-select{padding:7px 8px;background:var(--s2);border:1px solid var(--border2);border-radius:6px;color:var(--text);font-size:11px;font-weight:600;cursor:pointer;width:100%}
+.project-input{padding:7px 10px;background:transparent;border:1px solid transparent;border-radius:6px;color:var(--text);font-size:12px;transition:all 0.15s;width:100%;font-family:inherit}
+.project-input:focus,.project-input:hover{border-color:var(--border2);background:var(--s2);outline:none}
+.project-del{width:30px;height:30px;background:transparent;border:1px solid var(--border2);border-radius:6px;color:var(--sub);cursor:pointer;font-size:15px;line-height:1;transition:all 0.15s}
+.project-del:hover{color:var(--red);border-color:var(--red)}
+.kp-stat-pill{padding:8px 14px;background:var(--s1);border:1px solid var(--border2);border-radius:10px;display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:var(--sub)}
+.kp-stat-pill strong{color:var(--text);font-size:14px;font-weight:800}
+.kp-stat-pill.clickable{cursor:pointer;transition:all 0.15s}
+.kp-stat-pill.clickable:hover{transform:translateY(-1px);box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.kp-stat-pill.clickable.active{background:var(--s2);border-width:2px}
+.edit-targets-btn{background:var(--s2);border:1px solid var(--border2);color:var(--sub);font-size:11px;font-weight:700;padding:7px 13px;border-radius:8px;cursor:pointer;transition:all 0.15s}
+.edit-targets-btn:hover{color:var(--accent);border-color:var(--accent)}
+
+/* ── OVERVIEW KEY TARGETS (pinned from Targets tab) ── */
+.ov-pinned-targets-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.ov-pinned-card{background:var(--s2);border:1px solid var(--border2);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:8px;cursor:pointer;transition:border-color 0.15s}
+.ov-pinned-card:hover{border-color:var(--accent)}
+.ov-pinned-head{display:flex;align-items:center;justify-content:space-between}
+.ov-pinned-title{font-size:11px;font-weight:700;color:var(--sub);display:flex;align-items:center;gap:6px}
+.ov-pinned-pct{font-size:11px;font-weight:800;font-variant-numeric:tabular-nums}
+.ov-pinned-pct.green{color:#34d399}.ov-pinned-pct.orange{color:#fbbf24}.ov-pinned-pct.red{color:#f87171}
+.ov-pinned-values{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.ov-pinned-actual{font-size:20px;font-weight:800;color:var(--text);font-variant-numeric:tabular-nums}
+.ov-pinned-actual.green{color:#34d399}.ov-pinned-actual.orange{color:#fbbf24}.ov-pinned-actual.red{color:#f87171}
+.ov-pinned-target{font-size:10px;color:var(--dim);font-weight:600}
+
 /* Mobile polish — demo-specific controls stack nicely on narrow screens */
 @media(max-width:640px){
   .preview-investor-btn,.about-project-btn{font-size:10px;padding:6px 10px}
@@ -775,6 +864,8 @@ tbody td{padding:13px 14px;font-size:12px}
   <button class="nav-item" onclick="switchTab('marketing',this)">Marketing</button>
   <button class="nav-item" onclick="switchTab('impact',this)">Impact</button>
   <button class="nav-item" onclick="switchTab('comparisons',this)">Comparisons</button>
+  <button class="nav-item" onclick="switchTab('targets',this)">Targets</button>
+  <button class="nav-item" onclick="switchTab('keyprojects',this)">Key Projects</button>
   <div class="nav-section">Settings</div>
   <button class="nav-item" id="nav-dataentry" onclick="switchTab('dataentry',this)" style="display:none">Data Entry</button>
   <button class="nav-item" id="nav-investor" onclick="switchTab('investor',this)" style="display:none">Investor View</button>
@@ -869,6 +960,10 @@ tbody td{padding:13px 14px;font-size:12px}
   <!-- OVERVIEW -->
   <div class="page active" id="page-overview">
     <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text">Welcome — this is the <strong>daily snapshot</strong> the Cluso team uses internally. <strong>This whole dashboard is fully interactive:</strong> click any KPI tile to drill in, edit values directly in the UI, and use <strong>⚙️ Edit Metrics</strong> (top of each tab) to customise which metrics you see. Try <strong>👀 Preview as Investor</strong> (top right) to see the curated investor-facing view. In production, financial data syncs live from <strong>QuickBooks</strong> and sales/customer data flows from the team's <strong>CRM</strong>.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="section" id="ov-pinned-section" style="display:none">
+      <div class="section-head"><div class="section-label">Key Targets</div><div style="font-size:11px;color:var(--dim)">Pinned from the <strong>Targets</strong> tab · click any to jump there</div></div>
+      <div id="ov-pinned-targets" class="ov-pinned-targets-grid"></div>
+    </div>
     <div class="section">
       <div class="section-head"><div class="section-label">Key Metrics — <span id="ov-year-label"></span></div><div style="display:flex;gap:8px"><button class="edit-targets-btn" onclick="openTabEditor('overview')">&#9881;&#65039; Edit Metrics</button><button class="edit-targets-btn" onclick="toggleEditActuals('overview')">&#9998; Edit Data</button></div></div>
       <div class="edit-panel" id="edit-overview-panel">
@@ -1147,6 +1242,40 @@ tbody td{padding:13px 14px;font-size:12px}
         <div class="activity-item"><div class="a-dot red"></div><div><div class="a-text"><strong>Vertex Group</strong> flagged at risk</div><div class="a-time">Today</div></div></div>
         <div class="activity-item"><div class="a-dot accent"></div><div><div class="a-text"><strong>3 new leads</strong> added to pipeline</div><div class="a-time">Yesterday</div></div></div>
       </div>
+    </div>
+  </div>
+
+  <!-- TARGETS -->
+  <div class="page" id="page-targets">
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text"><strong>Annual goals tracked against live actuals.</strong> Each card shows progress vs target — 🟢 on track, 🟡 behind, 🔴 well behind. Click the <strong>📌 Pin to Overview</strong> checkbox on any card to surface that target on the Overview page so the whole team sees what matters most.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Targets — <span id="targets-year-label">Year 1 · 2026</span></div>
+          <div style="font-size:12px;color:var(--sub);margin-top:4px">What we're shooting for · each card shows actual vs target · filter by status using the pills below</div>
+        </div>
+      </div>
+      <div id="targets-summary-strip" style="display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap"></div>
+      <div id="targets-groups"></div>
+    </div>
+  </div>
+
+  <!-- KEY PROJECTS -->
+  <div class="page" id="page-keyprojects">
+    <div class="page-info-banner"><span class="page-info-banner-icon">Demo Tip</span><div class="page-info-banner-text"><strong>Lightweight internal project tracker.</strong> Each project has a RAG status (red/amber/green), owner, target date, and expandable notes. Admins can add new projects, edit inline, and delete. <strong>Not visible to investors</strong> — this is for the team's weekly stand-up.</div><button class="page-info-banner-close" onclick="this.parentElement.style.display='none'" title="Dismiss">×</button></div>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <div class="section-label">Key Projects</div>
+          <div style="font-size:12px;color:var(--sub);margin-top:4px">Internal project tracker · RAG status · target dates · expandable notes</div>
+        </div>
+        <button class="edit-targets-btn" onclick="addDemoKeyProject()">+ Add Project</button>
+      </div>
+      <div id="kp-summary-strip" style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap"></div>
+      <div class="kp-header-row">
+        <div>Project</div><div>Status</div><div>RAG</div><div>Owner</div><div>Target Date</div><div></div>
+      </div>
+      <div id="keyprojects-list"></div>
     </div>
   </div>
 
@@ -3213,6 +3342,9 @@ function switchTab(name,btn){
   else if(name==='access')renderAccessTab();
   else if(name==='marketing')renderMarketing(currentYear,currentMonth);
   else if(name==='impact')renderImpact(currentYear,currentMonth);
+  else if(name==='targets')renderDemoTargets();
+  else if(name==='keyprojects')renderDemoKeyProjects();
+  else if(name==='overview' && typeof renderDemoOverviewPinned==='function')renderDemoOverviewPinned();
   setTimeout(()=>updateAll(),50);
 }
 
@@ -4684,6 +4816,243 @@ const _origSwitchTab=window.switchTab||function(){};
 const _wrappedSwitch=function(tab,btn){_origSwitchTab(tab,btn);switchTabWithInvestor(tab,btn);};
 window.switchTab=_wrappedSwitch;
 
+// ── DEMO TARGETS + KEY PROJECTS (simplified for portfolio — local state only) ──
+// Sample target metrics. Each row: key, group, label, type, target(s), actual(s), direction, format, unit, pinned.
+let demoTargets=[
+  {key:'annual_rev',group:'Revenue & Growth',label:'Annual Revenue',type:'single',target:300000,actual:280000,dir:'higher',fmt:'currency',pinned:true,sort:1},
+  {key:'revenue_growth',group:'Revenue & Growth',label:'Revenue Growth YoY',type:'single',target:120,actual:157,dir:'higher',fmt:'percent',pinned:false,sort:2},
+  {key:'quarterly_rev',group:'Revenue & Growth',label:'Quarterly Revenue',type:'quarterly',qTargets:[70000,75000,75000,80000],qActuals:[60000,68000,72000,80000],dir:'higher',fmt:'currency',pinned:false,sort:3},
+  {key:'runway',group:'Cash & Runway',label:'Runway',type:'single',target:18,actual:27,dir:'higher',fmt:'months',pinned:true,sort:4},
+  {key:'ending_cash',group:'Cash & Runway',label:'Ending Cash',type:'single',target:400000,actual:450000,dir:'higher',fmt:'currency',pinned:false,sort:5},
+  {key:'monthly_burn',group:'Cash & Runway',label:'Monthly Burn Rate',type:'single',target:20000,actual:17000,dir:'lower',fmt:'currency',pinned:false,sort:6},
+  {key:'customers_annual',group:'Customers & Sales',label:'Active B2B Customers',type:'single',target:5,actual:3,dir:'higher',fmt:'number',pinned:false,sort:7},
+  {key:'prospects_contacted',group:'Customers & Sales',label:'Prospects Contacted',type:'single',target:240,actual:180,dir:'higher',fmt:'number',pinned:false,sort:8},
+  {key:'conversion',group:'Customers & Sales',label:'Prospect → Lead Conversion',type:'single',target:15,actual:12,dir:'higher',fmt:'percent',pinned:false,sort:9},
+  {key:'ltv_cac',group:'Unit Economics',label:'LTV : CAC',type:'single',target:3,actual:3.4,dir:'higher',fmt:'ratio',pinned:true,sort:10},
+  {key:'gross_margin',group:'Unit Economics',label:'Gross Margin',type:'single',target:80,actual:90,dir:'higher',fmt:'percent',pinned:false,sort:11},
+  {key:'cac_payback',group:'Unit Economics',label:'CAC Payback Period',type:'single',target:6,actual:3,dir:'lower',fmt:'months',pinned:false,sort:12},
+  {key:'rev_per_emp',group:'Team & Efficiency',label:'Revenue / Employee',type:'single',target:50000,actual:47000,dir:'higher',fmt:'currency',pinned:false,sort:13},
+  {key:'team_size',group:'Team & Efficiency',label:'Team Size',type:'single',target:6,actual:6,dir:'higher',fmt:'number',pinned:false,sort:14},
+  {key:'retention',group:'Customer Health',label:'Customer Retention',type:'single',target:90,actual:92,dir:'higher',fmt:'percent',pinned:false,sort:15},
+  {key:'nps',group:'Customer Health',label:'NPS',type:'single',target:50,actual:42,dir:'higher',fmt:'number',pinned:false,sort:16},
+];
+
+let demoProjects=[
+  {id:'kp1',name:'Launch Pipeline v2',status:'ongoing',rag:'green',owner:'Alex',target_date:'2026-06-15',notes:'Phase 1 backend complete. Phase 2 designs in review with Nana.',sort:1},
+  {id:'kp2',name:'Close Series A',status:'ongoing',rag:'amber',owner:'Nana',target_date:'2026-09-30',notes:'Met with 4 VCs last week. Waiting on 2 term sheets — likely narrowing to a lead by end of May.',sort:2},
+  {id:'kp3',name:'Finance Dashboard MVP',status:'complete',rag:'green',owner:'Emma',target_date:'2026-04-20',notes:'Shipped 2026-04-20. Rolling out to internal team this week, investor access next.',sort:3},
+  {id:'kp4',name:'QuickBooks Integration',status:'not_started',rag:'green',owner:'Dan',target_date:'2026-07-01',notes:'',sort:4},
+  {id:'kp5',name:'SOC 2 Compliance',status:'ongoing',rag:'red',owner:'Nana',target_date:'2026-08-15',notes:'BLOCKED — waiting on vendor assessment responses. May need to bring in a compliance consultant.',sort:5},
+];
+
+let demoTargetsFilter=null;
+
+function _demoEsc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+function _demoFmt(v,fmt){
+  if(v==null||v==='')return '—';
+  const n=Number(v);
+  if(fmt==='currency'){const a=Math.abs(n),s=n<0?'-':'';if(a>=1e6)return s+'£'+(a/1e6).toFixed(1)+'M';if(a>=1e3)return s+'£'+(a/1e3).toFixed(0)+'k';return s+'£'+a.toLocaleString();}
+  if(fmt==='percent')return n+'%';
+  if(fmt==='ratio')return n+' : 1';
+  if(fmt==='months')return n+' mo';
+  return n.toLocaleString();
+}
+
+function _demoProgress(actual,target,dir){
+  if(actual==null||target==null||target===0)return {pct:null,color:'gray'};
+  let pct;
+  if(dir==='lower'){pct=Math.round((target/actual)*100);}else{pct=Math.round((actual/target)*100);}
+  const color=pct>=90?'green':pct>=70?'orange':'red';
+  return {pct,color};
+}
+
+function _demoStatus(t){
+  if(t.type==='single'){const p=_demoProgress(t.actual,t.target,t.dir);return p.color;}
+  if(t.type==='quarterly'){
+    const progs=t.qTargets.map((tv,i)=>_demoProgress(t.qActuals[i],tv,t.dir).pct).filter(p=>p!=null);
+    if(!progs.length)return 'gray';
+    const avg=Math.round(progs.reduce((a,b)=>a+b,0)/progs.length);
+    return avg>=90?'green':avg>=70?'orange':'red';
+  }
+  return 'gray';
+}
+
+function setDemoTargetsFilter(f){demoTargetsFilter=(demoTargetsFilter===f)?null:f;renderDemoTargets();}
+
+function renderDemoTargets(){
+  renderDemoTargetsSummary();
+  const orderedGroups=['Cash & Runway','Revenue & Growth','Customers & Sales','Unit Economics','Team & Efficiency','Customer Health'];
+  const byGroup={};
+  demoTargets.forEach(t=>{(byGroup[t.group]=byGroup[t.group]||[]).push(t);});
+  if(demoTargetsFilter){Object.keys(byGroup).forEach(g=>{byGroup[g]=byGroup[g].filter(t=>_demoStatus(t)===demoTargetsFilter);});}
+  const groupList=orderedGroups.filter(g=>byGroup[g]&&byGroup[g].length);
+  const container=document.getElementById('targets-groups');
+  if(!container)return;
+  if(demoTargetsFilter && !groupList.length){
+    container.innerHTML=`<div style="padding:40px;text-align:center;color:var(--dim);font-size:13px;background:var(--s1);border:1px dashed var(--border2);border-radius:12px">No targets in this category. <a onclick="setDemoTargetsFilter(null)" style="color:var(--accent);cursor:pointer;text-decoration:underline">Clear filter</a></div>`;return;
+  }
+  container.innerHTML=groupList.map(g=>`<div class="target-group"><div class="target-group-head">${_demoEsc(g)}</div><div class="target-group-grid">${byGroup[g].map(renderDemoTargetCard).join('')}</div></div>`).join('');
+}
+
+function renderDemoTargetsSummary(){
+  const strip=document.getElementById('targets-summary-strip');
+  if(!strip)return;
+  let onTrack=0,behind=0,wellBehind=0;
+  demoTargets.forEach(t=>{const s=_demoStatus(t);if(s==='green')onTrack++;else if(s==='orange')behind++;else if(s==='red')wellBehind++;});
+  const act=(f)=>demoTargetsFilter===f?'active':'';
+  strip.innerHTML=`
+    <div class="kp-stat-pill clickable ${demoTargetsFilter===null?'active':''}" onclick="setDemoTargetsFilter(null)">🎯 <strong>${demoTargets.length}</strong> targets</div>
+    <div class="kp-stat-pill clickable ${act('green')}" style="border-color:rgba(52,211,153,0.35)" onclick="setDemoTargetsFilter('green')">✅ <strong style="color:#34d399">${onTrack}</strong> on track</div>
+    <div class="kp-stat-pill clickable ${act('orange')}" style="border-color:rgba(251,191,36,0.35)" onclick="setDemoTargetsFilter('orange')">⚠️ <strong style="color:#fbbf24">${behind}</strong> behind</div>
+    <div class="kp-stat-pill clickable ${act('red')}" style="border-color:rgba(248,113,113,0.35)" onclick="setDemoTargetsFilter('red')">🔴 <strong style="color:#f87171">${wellBehind}</strong> well behind</div>`;
+}
+
+function renderDemoTargetCard(t){
+  const hero=t.type==='quarterly'?_demoQuarterlyHero(t):_demoSingleHero(t);
+  const pin=`<div class="target-feature-row"><label class="target-feat" title="Show this target in the 'Key Targets' section at the top of the Overview page"><input type="checkbox" ${t.pinned?'checked':''} onchange="toggleDemoTargetPin('${_demoEsc(t.key)}',this.checked)"/> 📌 Pin to Overview</label></div>`;
+  return `<div class="target-card" data-key="${_demoEsc(t.key)}"><div class="target-card-head"><div class="target-card-label">${_demoEsc(t.label)}</div></div>${hero}${pin}</div>`;
+}
+
+function _demoSingleHero(t){
+  const p=_demoProgress(t.actual,t.target,t.dir);
+  const actualStr=_demoFmt(t.actual,t.fmt),targetStr=_demoFmt(t.target,t.fmt);
+  const barPct=Math.min(p.pct||0,100);
+  const note=p.pct==null?'no target set':(p.color==='green'?'on track':p.color==='orange'?'behind pace':'well behind');
+  return `<div class="target-headline">
+    <div class="target-headline-col actual ${p.color}"><span class="target-headline-label">Actual · FY 2026</span><span class="target-headline-value ${p.color}">${actualStr}</span></div>
+    <div class="target-headline-vs">vs</div>
+    <div class="target-headline-col target"><span class="target-headline-label">Target</span><span class="target-headline-value">${targetStr}</span></div>
+  </div>
+  <div class="target-bar-wrap">
+    <div class="target-bar-big"><div class="target-bar-fill-big ${p.color}" style="width:${barPct}%"></div></div>
+    <div class="target-bar-caption"><span>${note}</span><span class="pct ${p.color}">${p.pct!=null?p.pct+'%':'—'}</span></div>
+  </div>`;
+}
+
+function _demoQuarterlyHero(t){
+  const cells=[0,1,2,3].map(i=>{
+    const p=_demoProgress(t.qActuals[i],t.qTargets[i],t.dir);
+    return `<div class="target-q-big-cell ${p.color}">
+      <span class="target-q-big-label">Q${i+1}</span>
+      <span class="target-q-big-actual ${p.color}">${_demoFmt(t.qActuals[i],t.fmt)}</span>
+      <span class="target-q-big-target">vs ${_demoFmt(t.qTargets[i],t.fmt)}</span>
+      <span class="target-q-big-pct ${p.color}">${p.pct!=null?p.pct+'%':'—'}</span>
+    </div>`;
+  }).join('');
+  return `<div class="target-quarter-headline">${cells}</div>`;
+}
+
+function toggleDemoTargetPin(key,checked){
+  const t=demoTargets.find(x=>x.key===key);
+  if(t)t.pinned=checked;
+  showToast(checked?'📌 Pinned to Overview':'Removed from Overview','success',1500);
+  renderDemoTargets();
+  renderDemoOverviewPinned();
+}
+
+function renderDemoOverviewPinned(){
+  const container=document.getElementById('ov-pinned-targets');
+  const section=document.getElementById('ov-pinned-section');
+  if(!container||!section)return;
+  const pinned=demoTargets.filter(t=>t.pinned);
+  if(!pinned.length){section.style.display='none';return;}
+  section.style.display='';
+  container.innerHTML=pinned.map(t=>{
+    if(t.type==='single'){
+      const p=_demoProgress(t.actual,t.target,t.dir);
+      return `<div class="ov-pinned-card" onclick="switchTab('targets',document.querySelector('.nav-item[onclick*=targets]'))">
+        <div class="ov-pinned-head">
+          <span class="ov-pinned-title">🎯 ${_demoEsc(t.label)}</span>
+          <span class="ov-pinned-pct ${p.color}">${p.pct!=null?p.pct+'%':'—'}</span>
+        </div>
+        <div class="ov-pinned-values">
+          <span class="ov-pinned-actual ${p.color}">${_demoFmt(t.actual,t.fmt)}</span>
+          <span class="ov-pinned-target">/ target: ${_demoFmt(t.target,t.fmt)}</span>
+        </div>
+        <div class="target-bar-big" style="height:6px"><div class="target-bar-fill-big ${p.color}" style="width:${Math.min(p.pct||0,100)}%"></div></div>
+      </div>`;
+    }
+    return '';
+  }).join('');
+}
+
+// ── KEY PROJECTS ──
+function renderDemoKeyProjects(){
+  const container=document.getElementById('keyprojects-list');
+  if(!container)return;
+  const strip=document.getElementById('kp-summary-strip');
+  if(strip){
+    const total=demoProjects.length;
+    const done=demoProjects.filter(p=>p.status==='complete').length;
+    const inflight=demoProjects.filter(p=>p.status==='ongoing').length;
+    const notStarted=demoProjects.filter(p=>p.status==='not_started').length;
+    const red=demoProjects.filter(p=>p.rag==='red'&&p.status!=='complete').length;
+    strip.innerHTML=`
+      <div class="kp-stat-pill">📁 <strong>${total}</strong> projects</div>
+      <div class="kp-stat-pill">🔄 <strong>${inflight}</strong> ongoing</div>
+      <div class="kp-stat-pill">⏸ <strong>${notStarted}</strong> not started</div>
+      <div class="kp-stat-pill">✅ <strong>${done}</strong> complete</div>
+      ${red?`<div class="kp-stat-pill" style="border-color:rgba(248,113,113,0.4);color:#f87171">🔴 <strong style="color:#f87171">${red}</strong> at risk</div>`:''}`;
+  }
+  if(!demoProjects.length){
+    container.innerHTML='<div style="padding:40px;text-align:center;color:var(--dim);font-size:13px;background:var(--s1);border:1px dashed var(--border2);border-radius:12px">No projects yet. Click <strong>"+ Add Project"</strong> above to get started.</div>';return;
+  }
+  const ragColors={red:'#f87171',amber:'#fbbf24',green:'#34d399'};
+  container.innerHTML=demoProjects.slice().sort((a,b)=>(a.sort||0)-(b.sort||0)).map(p=>{
+    const notesOpen=(p.notes||'').length>0;
+    return `<div class="project-row" data-id="${_demoEsc(p.id)}" style="border-left:4px solid ${ragColors[p.rag]||ragColors.green}">
+      <div class="project-name-wrap">
+        <input type="text" class="project-name-input" value="${_demoEsc(p.name)}" onblur="saveDemoKeyProjectField('${_demoEsc(p.id)}','name',this.value)" placeholder="Project name"/>
+        <div style="display:flex;align-items:center;gap:2px"><span class="project-notes-toggle" onclick="toggleDemoProjectNotes('${_demoEsc(p.id)}')">${notesOpen?'📝 Notes':'+ Add notes'}</span></div>
+      </div>
+      <select class="project-select" onchange="saveDemoKeyProjectField('${_demoEsc(p.id)}','status',this.value)">
+        <option value="not_started" ${p.status==='not_started'?'selected':''}>⏸ Not Started</option>
+        <option value="ongoing" ${p.status==='ongoing'?'selected':''}>🔄 Ongoing</option>
+        <option value="complete" ${p.status==='complete'?'selected':''}>✅ Complete</option>
+      </select>
+      <select class="project-select" onchange="saveDemoKeyProjectField('${_demoEsc(p.id)}','rag',this.value)">
+        <option value="red" ${p.rag==='red'?'selected':''}>🔴 Red</option>
+        <option value="amber" ${p.rag==='amber'?'selected':''}>🟡 Amber</option>
+        <option value="green" ${p.rag==='green'?'selected':''}>🟢 Green</option>
+      </select>
+      <input type="text" class="project-input" value="${_demoEsc(p.owner||'')}" onblur="saveDemoKeyProjectField('${_demoEsc(p.id)}','owner',this.value)" placeholder="—"/>
+      <input type="date" class="project-input" value="${p.target_date||''}" onchange="saveDemoKeyProjectField('${_demoEsc(p.id)}','target_date',this.value||null)"/>
+      <button class="project-del" onclick="deleteDemoKeyProject('${_demoEsc(p.id)}')" title="Delete project">×</button>
+      <div class="project-notes-wrap ${notesOpen?'open':''}" id="kp-notes-${_demoEsc(p.id)}">
+        <textarea class="project-notes" placeholder="Context, blockers, next steps…" onblur="saveDemoKeyProjectField('${_demoEsc(p.id)}','notes',this.value)">${_demoEsc(p.notes||'')}</textarea>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function addDemoKeyProject(){
+  const nextOrder=demoProjects.length?Math.max(...demoProjects.map(p=>p.sort||0))+1:1;
+  const id='kp'+Date.now();
+  demoProjects.push({id,name:'New Project',status:'ongoing',rag:'amber',owner:'',target_date:'',notes:'',sort:nextOrder});
+  renderDemoKeyProjects();
+  showToast('Project added','success',1500);
+  setTimeout(()=>{const row=document.querySelector(`.project-row[data-id="${id}"] .project-name-input`);if(row){row.focus();row.select();}},50);
+}
+function saveDemoKeyProjectField(id,field,value){
+  const p=demoProjects.find(x=>x.id===id);
+  if(p)p[field]=value;
+  renderDemoKeyProjects();
+  showToast('Saved','success',800);
+}
+function deleteDemoKeyProject(id){
+  if(!confirm('Delete this project?'))return;
+  demoProjects=demoProjects.filter(p=>p.id!==id);
+  renderDemoKeyProjects();
+  showToast('Project deleted','success',1500);
+}
+function toggleDemoProjectNotes(id){
+  const wrap=document.getElementById('kp-notes-'+id);
+  if(!wrap)return;
+  wrap.classList.toggle('open');
+  if(wrap.classList.contains('open')){const ta=wrap.querySelector('textarea');if(ta)ta.focus();}
+}
+
 // ── DEMO BOOT: skip auth entirely, go straight to the dashboard with fake data ──
 let isRecoveryMode=false;
 (async function boot(){
@@ -4692,6 +5061,8 @@ let isRecoveryMode=false;
   await initDashboard();
   // Hide Sign Out + login-related controls that don't make sense in demo
   document.querySelectorAll('[onclick*="handleLogout"]').forEach(b=>b.style.display='none');
+  // Render Key Targets section on Overview (pinned from the Targets tab)
+  if(typeof renderDemoOverviewPinned==='function')renderDemoOverviewPinned();
   // Auto-open the About modal on every page load so first-time visitors get
   // the portfolio context immediately. Small delay lets the dashboard paint first.
   setTimeout(()=>{if(typeof openAboutModal==='function')openAboutModal();},600);
